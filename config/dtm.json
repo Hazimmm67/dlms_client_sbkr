@@ -1,0 +1,307 @@
+{
+  "device_name": "DTM_Itron_SL7000",
+  "protocol": "IEC 62056-21",
+  "connectivity": {
+    "connection_type": "Serial",
+    "interface": "RS232/RS485",
+    "serial_settings": {
+      "baud_rate": 9600,
+      "data_bits": 8,
+      "stop_bits": 1,
+      "parity": "None"
+    },
+    "station_id": 1,
+    "role": "master",
+    "polling_frequency": "1min"
+  },
+  "io_points": [
+    {
+      "description": "Active import energy aggregate",
+      "obis_code": "1-1:1.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 23,
+      "tid": "T36",
+      "low": -10000000000.0,
+      "high": 10000000000.0,
+      "sbkr_id": 983063
+    },
+    {
+      "description": "Export active energy aggregate",
+      "obis_code": "1-1:2.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 24,
+      "tid": "T36",
+      "low": -10000000000.0,
+      "high": 10000000000.0,
+      "sbkr_id": 983064
+    },
+    {
+      "description": "Instantaneous power factor aggregate",
+      "obis_code": "1-1:13.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 25,
+      "tid": "T36",
+      "low": -1,
+      "high": 1,
+      "sbkr_id": 983065
+    },
+    {
+      "description": "Current frequency",
+      "obis_code": "1-1:14.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 45,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983085
+    },
+    {
+      "description": "Import active power p1",
+      "obis_code": "1-1:21.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 46,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983086
+    },
+    {
+      "description": "Export active power p1",
+      "obis_code": "1-1:22.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 47,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983087
+    },
+    {
+      "description": "Import reactive power p1",
+      "obis_code": "1-1:23.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 48,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983088
+    },
+    {
+      "description": "Export reactive power p1",
+      "obis_code": "1-1:24.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 49,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983089
+    },
+    {
+      "description": "I1 Current",
+      "obis_code": "1-1:31.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 50,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983090
+    },
+    {
+      "description": "V1/V12 Voltage",
+      "obis_code": "1-1:32.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 51,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983091
+    },
+    {
+      "description": "Power Factor 1",
+      "obis_code": "1-1:33.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 52,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983092
+    },
+    {
+      "description": "Import active power p2",
+      "obis_code": "1-1:41.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 53,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983093
+    },
+    {
+      "description": "Export active power p2",
+      "obis_code": "1-1:42.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 54,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983094
+    },
+    {
+      "description": "Import reactive power p2",
+      "obis_code": "1-1:43.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 55,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983095
+    },
+    {
+      "description": "Export reactive power p2",
+      "obis_code": "1-1:44.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 56,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983096
+    },
+    {
+      "description": "I2 Current",
+      "obis_code": "1-1:51.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 57,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983097
+    },
+    {
+      "description": "V2/V23 Voltage",
+      "obis_code": "1-1:52.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 58,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983098
+    },
+    {
+      "description": "Power Factor 2",
+      "obis_code": "1-1:53.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 59,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983099
+    },
+    {
+      "description": "Import active power p3",
+      "obis_code": "1-1:61.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 60,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983100
+    },
+    {
+      "description": "Export active power p3",
+      "obis_code": "1-1:62.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 61,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983101
+    },
+    {
+      "description": "Import reactive power p3",
+      "obis_code": "1-1:63.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 62,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983102
+    },
+    {
+      "description": "Export reactive power p3",
+      "obis_code": "1-1:64.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 63,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983103
+    },
+    {
+      "description": "I3 Current",
+      "obis_code": "1-1:71.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 64,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983104
+    },
+    {
+      "description": "V3/V31 Voltage",
+      "obis_code": "1-1:72.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 65,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983105
+    },
+    {
+      "description": "Power Factor 3",
+      "obis_code": "1-1:73.25",
+      "data_type": "AI",
+      "casdu": 15,
+      "ioa": 66,
+      "tid": "T36",
+      "low": -50000,
+      "high": 50000,
+      "sbkr_id": 983106
+    }
+  ],
+  "dlms": {
+    "serial_port": "/dev/ttyUSB0",
+    "client_address": 16,
+    "server_address": 1,
+    "authentication": "none",
+    "iec_mode_e": false,
+    "timeout_ms": 3000
+  },
+  "sbkr": {
+    "gateway": "",
+    "library": "",
+    "logger_endpoint": ""
+  }
+}
