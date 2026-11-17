@@ -27,6 +27,7 @@ def main():
     parser.add_argument('--meter-port', type=int, default=14061)
     parser.add_argument('--gateway-port', type=int, default=15555)
     parser.add_argument('--output-dir', type=Path, default=ROOT / '.run')
+    parser.add_argument('--build-dir', type=Path, default=ROOT / 'build')
     args = parser.parse_args()
     if not all(1 <= p <= 65535 for p in (args.meter_port, args.gateway_port)):
         parser.error('Ports must be between 1 and 65535')
@@ -40,7 +41,7 @@ def main():
     except BlockingIOError:
         print('A demo already owns this output directory.', file=sys.stderr)
         return 2
-    build = ROOT / 'build'
+    build = args.build_dir.resolve()
     for name in ('dlms_meter_simulator', 'sbkr_demo_gateway', 'dlms_client_sbkr', 'libsbkr_demo.so'):
         if not (build / name).is_file():
             print('Build first: cmake -S . -B build -DDLMS_SBKR_BUILD_DEMO=ON && cmake --build build -j4', file=sys.stderr)
@@ -111,9 +112,12 @@ def main():
             while not stopped:
                 for key, _ in selector.select(.5):
                     name, stream = key.data
-                    line = key.fileobj.readline().decode(errors='replace').rstrip()
-                    if not line:
+                    raw = key.fileobj.readline()
+                    if not raw:
                         selector.unregister(key.fileobj)
+                        continue
+                    line = raw.decode(errors='replace').rstrip()
+                    if not line:
                         continue
                     if name == 'client' and stream == 'stdout' and line.startswith('{'):
                         snapshot = json.loads(line)

@@ -74,6 +74,10 @@ if(DLMS_SBKR_BUILD_TESTS)
             $<TARGET_FILE:sbkr_demo_gateway> $<TARGET_FILE:sbkr_demo> $<TARGET_FILE:test_demo_api>
             "${CMAKE_CURRENT_SOURCE_DIR}/config/dtm.tcp-demo.json")
         set_tests_properties(demo_sbkr_integration PROPERTIES TIMEOUT 45)
+        add_test(NAME demo_runner_recovery COMMAND ${Python3_EXECUTABLE}
+            "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_demo_runner.py"
+            "${CMAKE_CURRENT_SOURCE_DIR}/scripts/run_sbkr_demo.py" "${CMAKE_CURRENT_BINARY_DIR}")
+        set_tests_properties(demo_runner_recovery PROPERTIES TIMEOUT 45)
     endif()
     add_test(NAME tcp_roundtrip COMMAND ${Python3_EXECUTABLE} "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_tcp.py" $<TARGET_FILE:dlms_client_sbkr_cli> $<TARGET_FILE:dlms_meter_simulator> "${CMAKE_CURRENT_SOURCE_DIR}/config/dtm.tcp-demo.json")
     set_tests_properties(tcp_roundtrip PROPERTIES TIMEOUT 35)

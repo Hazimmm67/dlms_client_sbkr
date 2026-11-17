@@ -40,6 +40,7 @@ python3 -c 'import json,os,signal; s=json.load(open(".run/demo-status.json")); o
 The saved store is preserved for the next run. Two runners cannot share an output
 directory, and two gateways cannot write the same store. Ports can be changed
 using `--meter-port` and `--gateway-port`; use `--output-dir` for a separate run.
+Use `--build-dir` to select a different CMake build directory.
 
 The displayed meter values are synthetic. A gateway status of zero means the
 local demo gateway acknowledged the operation; it says nothing about delivery to
